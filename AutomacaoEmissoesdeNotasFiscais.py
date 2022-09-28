@@ -1,36 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
-#Lógica por trás do programa
-
-#Passo 1: Entrar no navegador
-#Passo2: Preencher login e senha
-#Passo3: Preencher os campos do sistema
-    #Campo 1: Nome/Razão Social
-    #Campo 2: Endereço
-    #Campo 3: Bairro
-    #Campo 4: Município
-    #Campo 5: CEP
-    #Campo 6: UF
-    #Campo 7: CNPJ/CPF
-    #Campo 8: Incrição estadual
-    #Campo 9: Descrição do produto/serviço
-    #Campo 10: Quantidade
-    #Campo 11: Valor Unitário
-    #Campo 12: Valor Total
-    
-#Passo 4: Clicar no botão de Emitir Nota
-#Passo 5: Recarregar o navegador e limpar o formulário
-    
-
-
-# # Importando Bibliotecas e métodos
-
-# In[ ]:
-
+# Importando Bibliotecas e métodos
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -54,30 +22,19 @@ import os
 import time
 
 
-# # Passo 1: Entrar no navegador
-
-# In[ ]:
-
+# Passo 1: Entrar no navegador
 
 caminho = os.getcwd()
 arquivo = caminho + r"\login.html"
 navegador.get(arquivo)
 
-
-# # Passo 2: Preencher login e senha
-
-# In[ ]:
-
+# Passo 2: Preencher login e senha
 
 navegador.find_element(By.XPATH, "/html/body/div/form/input[1]").send_keys('Thais', Keys.TAB, '123')
 time.sleep(1)
 navegador.find_element(By.XPATH, "/html/body/div/form/button").click()
 
-
-# # Passo 3/4/5: Preencher os campos do sistema para cada linha da tabela e finalizar o programa
-
-# In[ ]:
-
+# Passo 3/4/5: Preencher os campos do sistema para cada linha da tabela e finalizar o programa
 
 import pandas as pd 
 
@@ -116,10 +73,6 @@ for linha in tabela_notas.index:
     
     #Recarregar página para limpar formulário
     navegador.refresh()
-
-
-# In[ ]:
-
 
 navegador.quit()
 
