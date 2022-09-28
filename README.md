@@ -8,19 +8,7 @@
 
 #Passo2: Preencher login e senha
 
-#Passo3: Preencher os campos do sistema
-    #Campo 1: Nome/Razão Social
-    #Campo 2: Endereço
-    #Campo 3: Bairro
-    #Campo 4: Município
-    #Campo 5: CEP
-    #Campo 6: UF
-    #Campo 7: CNPJ/CPF
-    #Campo 8: Incrição estadual
-    #Campo 9: Descrição do produto/serviço
-    #Campo 10: Quantidade
-    #Campo 11: Valor Unitário
-    #Campo 12: Valor Total
+#Passo3 - Preencher os campos do sistema: Nome/Razão Social, Endereço, Bairro, Município, CEP, UF, CNPJ/CPF, Incrição estadual, Descrição do produto/serviço, Quantidade, Valor Unitário e Valor Total.
     
 #Passo 4: Clicar no botão de Emitir Nota
 
